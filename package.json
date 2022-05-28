@@ -1,0 +1,28 @@
+{
+  "name": "smartedu",
+  "version": "1.0.0",
+  "description": "Education Portal",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nisanurbaydas/smart-education.git"
+  },
+  "keywords": [
+    "education",
+    "portal",
+    "node.js"
+  ],
+  "author": "Nisa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nisanurbaydas/smart-education/issues"
+  },
+  "homepage": "https://github.com/nisanurbaydas/smart-education#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "prettier": "2.6.2"
+  }
+}
