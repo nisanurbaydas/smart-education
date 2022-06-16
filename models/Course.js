@@ -15,6 +15,10 @@ const CoursSchema = new Schema({
     trim: true,
     //description'ın başında ve sonunda bulunan boşlukları kaldırmaya yarar
   },
+  category: {
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'Category'
+  },
   createdAt: {
     type: Date,
     default: Date.now,
