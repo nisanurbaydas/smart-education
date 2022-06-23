@@ -16,8 +16,12 @@ const CoursSchema = new Schema({
     //description'ın başında ve sonunda bulunan boşlukları kaldırmaya yarar
   },
   category: {
-    type:mongoose.Schema.Types.ObjectId,
-    ref: 'Category'
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Category',
+  },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
   },
   createdAt: {
     type: Date,
@@ -29,13 +33,13 @@ const CoursSchema = new Schema({
   },
 });
 
-CoursSchema.pre('validate', function(next){
+CoursSchema.pre('validate', function (next) {
   this.slug = slugify(this.name, {
     lower: true,
-    strict: true
-  })
+    strict: true,
+  });
   next();
-})
+});
 
 const Course = mongoose.model('Course', CoursSchema);
 
